@@ -8,7 +8,11 @@ const Home: React.FC = () => {
     <>
       <SEO 
         title="Home" 
-        description="Welcome to ISRESSM - A premier institute for environment, security, and safety management research and training." 
+        description="ISRESSM delivers strategic research, elite training, and consultancy that advance environment, safety, and security management across Africa." 
+        image={{
+          url: 'https://images.unsplash.com/photo-1627556704290-2b1f5853ff78?q=80&w=1600&auto=format&fit=crop',
+          alt: 'ISRESSM professionals celebrating certification'
+        }}
       />
       
       {/* Hero Section - Background set to #1C021B via brand-dark/secondary-900 */}

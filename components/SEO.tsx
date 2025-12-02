@@ -3,9 +3,13 @@ import React, { useEffect } from 'react';
 interface SEOProps {
   title: string;
   description: string;
+  image?: {
+    url: string;
+    alt?: string;
+  };
 }
 
-const SEO: React.FC<SEOProps> = ({ title, description }) => {
+const SEO: React.FC<SEOProps> = ({ title, description, image }) => {
   useEffect(() => {
     // Update Document Title
     document.title = `${title} | ISRESSM`;
@@ -31,7 +35,18 @@ const SEO: React.FC<SEOProps> = ({ title, description }) => {
     updateMetaTag('property', 'og:description', description);
     updateMetaTag('property', 'og:type', 'website');
 
-  }, [title, description]);
+    if (image?.url) {
+      updateMetaTag('property', 'og:image', image.url);
+      updateMetaTag('property', 'og:image:secure_url', image.url);
+      updateMetaTag('name', 'twitter:card', 'summary_large_image');
+      updateMetaTag('name', 'twitter:image', image.url);
+      if (image.alt) {
+        updateMetaTag('property', 'og:image:alt', image.alt);
+        updateMetaTag('name', 'twitter:image:alt', image.alt);
+      }
+    }
+
+  }, [title, description, image]);
 
   return null;
 };
