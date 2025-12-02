@@ -36,7 +36,7 @@ const Apply: React.FC = () => {
                NOTE: To make this form functional, replace the action URL with your specific Formspree ID.
                e.g. action="https://formspree.io/f/xyzaqwer"
             */}
-          <form action="https://formspree.io/f/placeholder" method="POST" encType="multipart/form-data" className="space-y-6 lg:space-y-8">
+          <form action="https://formspree.io/f/mzznggly" method="POST" encType="multipart/form-data" className="space-y-6 lg:space-y-8">
             
             {/* Personal Details */}
             <div className="space-y-4 lg:space-y-6">
