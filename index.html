@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ISRESSM - Institute of Strategic Research on Environment, Security and Safety Management</title>
+    <link rel="icon" type="image/png" href="https://i.ibb.co/VcNW5gqk/favicon-3.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Poppins', 'sans-serif'],
+            },
+            colors: {
+              // ACCENT COLOR PALETTE (#B3660C)
+              primary: {
+                50: '#fdf8f3',
+                100: '#f9ecd9',
+                200: '#f3dcb8',
+                500: '#d97d0e',
+                600: '#B3660C', // MAIN ACCENT / BUTTONS
+                700: '#8f520a', // HOVER
+                800: '#754308',
+                900: '#603707',
+              },
+              // MAIN TEXT / DARK BG PALETTE (#1C021B)
+              secondary: {
+                50: '#fbf5fb',
+                100: '#f5eaf5',
+                200: '#ebd5eb',
+                600: '#4a0547',
+                800: '#2d032b',
+                900: '#1C021B', // MAIN TEXT / HERO BG
+              },
+              brand: {
+                dark: '#1C021B',
+                gold: '#B3660C',
+              }
+            }
+          }
+        }
+      }
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "vite": "https://aistudiocdn.com/vite@^7.2.6",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-gray-50 text-secondary-900 antialiased selection:bg-brand-gold selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
