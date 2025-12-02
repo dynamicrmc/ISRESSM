@@ -67,7 +67,7 @@ const Services: React.FC = () => {
 
                     <div className="pt-4">
                       <Link 
-                        to="/apply" 
+                        to="/service-booking" 
                         className="inline-flex items-center gap-3 bg-primary-600 text-white px-6 py-3 lg:px-8 lg:py-4 rounded-xl font-semibold hover:bg-primary-700 transition-all duration-300 group-hover:translate-x-2 shadow-lg shadow-gray-200 text-sm lg:text-base"
                       >
                         <span>Book This Service</span>
