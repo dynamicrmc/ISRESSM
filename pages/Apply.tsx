@@ -15,7 +15,7 @@ const Apply: React.FC = () => {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img 
-            src="https://images.unsplash.com/photo-1627556704290-2b1f5853ff78?q=80&w=1000&auto=format&fit=crop" 
+            src="https://i.ibb.co/R4jphyFg/ISRESSM-1.jpg" 
             alt="Background" 
             className="w-full h-full object-cover"
           />

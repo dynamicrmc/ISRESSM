@@ -87,8 +87,8 @@ const Home: React.FC = () => {
                <div className="relative z-10 lg:-mr-32 xl:-mr-48">
                   {/* Main Image */}
                   <img 
-                    src="https://images.unsplash.com/photo-1627556704290-2b1f5853ff78?q=80&w=1000&auto=format&fit=crop" 
-                    alt="Smiling Nigerian Graduates" 
+                    src="https://i.ibb.co/R4jphyFg/ISRESSM-1.jpg" 
+                    alt="ISRESSM Hero" 
                     className="relative z-10 w-full max-w-[300px] lg:max-w-[700px] h-auto object-cover mask-gradient"
                     style={{
                       maskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)',
@@ -136,7 +136,7 @@ const Home: React.FC = () => {
             <div className="grid grid-cols-1 gap-6">
                <div className="relative rounded-lg overflow-hidden shadow-xl h-64 lg:h-auto border border-gray-100">
                  <div className="absolute inset-0 bg-primary-900/10 hover:bg-transparent transition-colors"></div>
-                 <img src="https://i.ibb.co/s9fBZmPT/2148950574-1.jpg" alt="Research" className="w-full h-full object-cover" />
+                 <img src="https://i.ibb.co/KjhNbShx/Gemini-Generated-Image-4m41j04m41j04m41.png" alt="Research" className="w-full h-full object-cover" />
                </div>
             </div>
           </div>
@@ -190,7 +190,7 @@ const Home: React.FC = () => {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
             <img 
-                src="https://i.ibb.co/WWrpsq3J/2148950544-1.jpg" 
+                src="https://i.ibb.co/S4WP3Pzd/Gemini-Generated-Image-ihs35tihs35tihs3-1.png" 
                 alt="Modern Architecture" 
                 className="w-full h-full object-cover"
             />
