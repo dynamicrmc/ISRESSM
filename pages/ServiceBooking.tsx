@@ -104,7 +104,7 @@ const ServiceBooking: React.FC = () => {
 
                 <div className="grid md:grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-1">Full Name</label>
+                    <label className="block text-sm font-semibold text-gray-700 mb-1">Full Name <span className="text-red-600 font-bold">*</span></label>
                     <input
                       type="text"
                       name="full_name"
@@ -125,7 +125,7 @@ const ServiceBooking: React.FC = () => {
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-1 flex items-center gap-2">
                       <Mail size={16} className="text-primary-500" />
-                      Email
+                      Email <span className="text-red-600 font-bold">*</span>
                     </label>
                     <input
                       type="email"
@@ -138,7 +138,7 @@ const ServiceBooking: React.FC = () => {
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-1 flex items-center gap-2">
                       <Phone size={16} className="text-primary-500" />
-                      Phone (incl. country code)
+                      Phone (incl. country code) <span className="text-red-600 font-bold">*</span>
                     </label>
                     <input
                       type="tel"
@@ -162,7 +162,7 @@ const ServiceBooking: React.FC = () => {
 
                 <div className="grid md:grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-1">Service Category</label>
+                    <label className="block text-sm font-semibold text-gray-700 mb-1">Service Category <span className="text-red-600 font-bold">*</span></label>
                     <select
                       name="service_category"
                       value={serviceIndex}
@@ -205,7 +205,7 @@ const ServiceBooking: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-1">Project Brief</label>
+                  <label className="block text-sm font-semibold text-gray-700 mb-1">Project Brief <span className="text-red-600 font-bold">*</span></label>
                   <textarea
                     name="project_brief"
                     rows={5}

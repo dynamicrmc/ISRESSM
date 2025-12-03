@@ -43,17 +43,17 @@ const Apply: React.FC = () => {
                 <h3 className="text-lg font-bold text-secondary-900 border-b pb-2">Personal Information</h3>
                 
                 <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Full Name <span className="text-red-600 font-bold">*</span></label>
                     <input type="text" name="name" id="name" required className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-all text-sm lg:text-base" placeholder="John Doe" />
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
                     <div>
-                        <label htmlFor="dob" className="block text-sm font-medium text-gray-700 mb-1">Date of Birth</label>
+                        <label htmlFor="dob" className="block text-sm font-medium text-gray-700 mb-1">Date of Birth <span className="text-red-600 font-bold">*</span></label>
                         <input type="date" name="dob" id="dob" required className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none text-sm lg:text-base" />
                     </div>
                     <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Gender</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Gender <span className="text-red-600 font-bold">*</span></label>
                         <div className="flex gap-6 mt-3">
                             <label className="flex items-center">
                                 <input type="radio" name="gender" value="Male" required className="w-4 h-4 text-primary-600 focus:ring-primary-500" />
@@ -69,31 +69,31 @@ const Apply: React.FC = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6">
                     <div>
-                        <label htmlFor="nationality" className="block text-sm font-medium text-gray-700 mb-1">Nationality</label>
+                        <label htmlFor="nationality" className="block text-sm font-medium text-gray-700 mb-1">Nationality <span className="text-red-600 font-bold">*</span></label>
                         <input type="text" name="nationality" id="nationality" required className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 outline-none text-sm lg:text-base" />
                     </div>
                     <div>
-                        <label htmlFor="state" className="block text-sm font-medium text-gray-700 mb-1">State of Origin</label>
+                        <label htmlFor="state" className="block text-sm font-medium text-gray-700 mb-1">State of Origin <span className="text-red-600 font-bold">*</span></label>
                         <input type="text" name="state" id="state" required className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 outline-none text-sm lg:text-base" />
                     </div>
                     <div>
-                        <label htmlFor="lga" className="block text-sm font-medium text-gray-700 mb-1">LGA</label>
+                        <label htmlFor="lga" className="block text-sm font-medium text-gray-700 mb-1">LGA <span className="text-red-600 font-bold">*</span></label>
                         <input type="text" name="lga" id="lga" required className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 outline-none text-sm lg:text-base" />
                     </div>
                 </div>
 
                 <div>
-                    <label htmlFor="address" className="block text-sm font-medium text-gray-700 mb-1">Residential Address</label>
+                    <label htmlFor="address" className="block text-sm font-medium text-gray-700 mb-1">Residential Address <span className="text-red-600 font-bold">*</span></label>
                     <textarea name="address" id="address" rows={3} required className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 outline-none text-sm lg:text-base" placeholder="Enter your full address"></textarea>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
                     <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address <span className="text-red-600 font-bold">*</span></label>
                         <input type="email" name="email" id="email" required className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 outline-none text-sm lg:text-base" placeholder="you@example.com" />
                     </div>
                     <div>
-                        <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                        <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone Number <span className="text-red-600 font-bold">*</span></label>
                         <input type="tel" name="phone" id="phone" required className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 outline-none text-sm lg:text-base" placeholder="+234..." />
                     </div>
                 </div>
@@ -104,7 +104,7 @@ const Apply: React.FC = () => {
                 <h3 className="text-lg font-bold text-secondary-900 border-b pb-2">Program Selection</h3>
 
                 <div>
-                    <label htmlFor="program" className="block text-sm font-medium text-gray-700 mb-1">Select Program</label>
+                    <label htmlFor="program" className="block text-sm font-medium text-gray-700 mb-1">Select Program <span className="text-red-600 font-bold">*</span></label>
                     <select name="program" id="program" required className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 outline-none bg-white text-sm lg:text-base">
                         <option value="">-- Select a Program --</option>
                         {PROGRAM_SECTIONS.flatMap(s => s.courses.map(c => (
@@ -114,7 +114,7 @@ const Apply: React.FC = () => {
                 </div>
 
                 <div>
-                    <label htmlFor="membership" className="block text-sm font-medium text-gray-700 mb-1">Select Membership</label>
+                    <label htmlFor="membership" className="block text-sm font-medium text-gray-700 mb-1">Select Membership <span className="text-red-600 font-bold">*</span></label>
                     <select name="membership" id="membership" required className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 outline-none bg-white text-sm lg:text-base">
                         <option value="">-- Select Membership Tier --</option>
                         {MEMBERSHIPS.map(m => (
@@ -124,7 +124,7 @@ const Apply: React.FC = () => {
                 </div>
 
                 <div>
-                    <label htmlFor="certification" className="block text-sm font-medium text-gray-700 mb-1">Select Certification Level</label>
+                    <label htmlFor="certification" className="block text-sm font-medium text-gray-700 mb-1">Select Certification Level <span className="text-red-600 font-bold">*</span></label>
                     <select name="certification" id="certification" required className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 outline-none bg-white text-sm lg:text-base">
                         <option value="">-- Select Category --</option>
                         {CERTIFICATION_CATEGORIES.map(c => (
@@ -139,12 +139,12 @@ const Apply: React.FC = () => {
                 <h3 className="text-lg font-bold text-secondary-900 border-b pb-2">Documents</h3>
                 
                 <div>
-                    <label htmlFor="cv" className="block text-sm font-medium text-gray-700 mb-1">Upload CV (PDF/Doc)</label>
+                    <label htmlFor="cv" className="block text-sm font-medium text-gray-700 mb-1">Upload CV (PDF/Doc) <span className="text-red-600 font-bold">*</span></label>
                     <input type="file" name="cv" id="cv" accept=".pdf,.doc,.docx" required className="w-full text-xs lg:text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-xs lg:file:text-sm file:font-semibold file:bg-primary-50 file:text-primary-700 hover:file:bg-primary-100" />
                 </div>
 
                 <div>
-                    <label htmlFor="photo" className="block text-sm font-medium text-gray-700 mb-1">Upload Passport Photograph</label>
+                    <label htmlFor="photo" className="block text-sm font-medium text-gray-700 mb-1">Upload Passport Photograph <span className="text-red-600 font-bold">*</span></label>
                     <input type="file" name="photo" id="photo" accept="image/*" required className="w-full text-xs lg:text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-xs lg:file:text-sm file:font-semibold file:bg-primary-50 file:text-primary-700 hover:file:bg-primary-100" />
                 </div>
             </div>
