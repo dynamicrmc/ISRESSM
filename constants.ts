@@ -197,7 +197,7 @@ export const CONTACT_INFO = {
     'president@isressm.org.ng',
     'registrar@isressm.org.ng',
     'hr@isressm.org.ng',
-    'trainings@isresm.org.ng',
+    'trainings@isressm.org.ng',
     'memberships@isressm.org.ng'
   ],
   website: 'www.isressm.org.ng'
