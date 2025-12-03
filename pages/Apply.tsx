@@ -56,11 +56,11 @@ const Apply: React.FC = () => {
                         <label className="block text-sm font-medium text-gray-700 mb-1">Gender</label>
                         <div className="flex gap-6 mt-3">
                             <label className="flex items-center">
-                                <input type="radio" name="gender" value="Male" className="w-4 h-4 text-primary-600 focus:ring-primary-500" />
+                                <input type="radio" name="gender" value="Male" required className="w-4 h-4 text-primary-600 focus:ring-primary-500" />
                                 <span className="ml-2 text-gray-700 text-sm lg:text-base">Male</span>
                             </label>
                             <label className="flex items-center">
-                                <input type="radio" name="gender" value="Female" className="w-4 h-4 text-primary-600 focus:ring-primary-500" />
+                                <input type="radio" name="gender" value="Female" required className="w-4 h-4 text-primary-600 focus:ring-primary-500" />
                                 <span className="ml-2 text-gray-700 text-sm lg:text-base">Female</span>
                             </label>
                         </div>
@@ -74,11 +74,11 @@ const Apply: React.FC = () => {
                     </div>
                     <div>
                         <label htmlFor="state" className="block text-sm font-medium text-gray-700 mb-1">State of Origin</label>
-                        <input type="text" name="state" id="state" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 outline-none text-sm lg:text-base" />
+                        <input type="text" name="state" id="state" required className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 outline-none text-sm lg:text-base" />
                     </div>
                     <div>
                         <label htmlFor="lga" className="block text-sm font-medium text-gray-700 mb-1">LGA</label>
-                        <input type="text" name="lga" id="lga" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 outline-none text-sm lg:text-base" />
+                        <input type="text" name="lga" id="lga" required className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 outline-none text-sm lg:text-base" />
                     </div>
                 </div>
 
@@ -104,8 +104,8 @@ const Apply: React.FC = () => {
                 <h3 className="text-lg font-bold text-secondary-900 border-b pb-2">Program Selection</h3>
 
                 <div>
-                    <label htmlFor="program" className="block text-sm font-medium text-gray-700 mb-1">Select Program (Optional)</label>
-                    <select name="program" id="program" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 outline-none bg-white text-sm lg:text-base">
+                    <label htmlFor="program" className="block text-sm font-medium text-gray-700 mb-1">Select Program</label>
+                    <select name="program" id="program" required className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 outline-none bg-white text-sm lg:text-base">
                         <option value="">-- Select a Program --</option>
                         {PROGRAM_SECTIONS.flatMap(s => s.courses.map(c => (
                             <option key={c} value={c}>{c}</option>
@@ -114,8 +114,8 @@ const Apply: React.FC = () => {
                 </div>
 
                 <div>
-                    <label htmlFor="membership" className="block text-sm font-medium text-gray-700 mb-1">Select Membership (Optional)</label>
-                    <select name="membership" id="membership" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 outline-none bg-white text-sm lg:text-base">
+                    <label htmlFor="membership" className="block text-sm font-medium text-gray-700 mb-1">Select Membership</label>
+                    <select name="membership" id="membership" required className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 outline-none bg-white text-sm lg:text-base">
                         <option value="">-- Select Membership Tier --</option>
                         {MEMBERSHIPS.map(m => (
                             <option key={m.title} value={m.title}>{m.title} ({m.fee})</option>
@@ -125,7 +125,7 @@ const Apply: React.FC = () => {
 
                 <div>
                     <label htmlFor="certification" className="block text-sm font-medium text-gray-700 mb-1">Select Certification Level</label>
-                    <select name="certification" id="certification" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 outline-none bg-white text-sm lg:text-base">
+                    <select name="certification" id="certification" required className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 outline-none bg-white text-sm lg:text-base">
                         <option value="">-- Select Category --</option>
                         {CERTIFICATION_CATEGORIES.map(c => (
                             <option key={c} value={c}>{c}</option>
@@ -140,12 +140,12 @@ const Apply: React.FC = () => {
                 
                 <div>
                     <label htmlFor="cv" className="block text-sm font-medium text-gray-700 mb-1">Upload CV (PDF/Doc)</label>
-                    <input type="file" name="cv" id="cv" accept=".pdf,.doc,.docx" className="w-full text-xs lg:text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-xs lg:file:text-sm file:font-semibold file:bg-primary-50 file:text-primary-700 hover:file:bg-primary-100" />
+                    <input type="file" name="cv" id="cv" accept=".pdf,.doc,.docx" required className="w-full text-xs lg:text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-xs lg:file:text-sm file:font-semibold file:bg-primary-50 file:text-primary-700 hover:file:bg-primary-100" />
                 </div>
 
                 <div>
                     <label htmlFor="photo" className="block text-sm font-medium text-gray-700 mb-1">Upload Passport Photograph</label>
-                    <input type="file" name="photo" id="photo" accept="image/*" className="w-full text-xs lg:text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-xs lg:file:text-sm file:font-semibold file:bg-primary-50 file:text-primary-700 hover:file:bg-primary-100" />
+                    <input type="file" name="photo" id="photo" accept="image/*" required className="w-full text-xs lg:text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-xs lg:file:text-sm file:font-semibold file:bg-primary-50 file:text-primary-700 hover:file:bg-primary-100" />
                 </div>
             </div>
 
