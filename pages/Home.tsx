@@ -15,36 +15,34 @@ const Home: React.FC = () => {
         }}
       />
       
-      {/* Hero Section - Background set to #1C021B via brand-dark/secondary-900 */}
-      <section className="relative bg-secondary-900 text-white overflow-hidden min-h-[60vh] lg:min-h-[85vh] flex items-center py-8 lg:py-32">
-        
-        {/* Abstract Background Shapes */}
-        <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-           <div className="absolute -top-24 -left-24 w-64 h-64 lg:w-96 lg:h-96 bg-brand-gold/10 rounded-full blur-3xl"></div>
-           <div className="absolute bottom-0 right-1/2 translate-x-1/2 w-[300px] h-[300px] lg:w-[600px] lg:h-[600px] bg-secondary-800/50 rounded-full blur-[80px] lg:blur-[120px]"></div>
-        </div>
+      {/* Hero Section - Background Image */}
+      <section 
+        className="relative text-white overflow-hidden min-h-[90vh] flex items-center py-8 lg:py-32 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: 'url(https://i.ibb.co/R4jphyFg/ISRESSM-1.jpg)',
+          backgroundAttachment: 'fixed'
+        }}
+      >
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-secondary-900/70"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <div className="flex flex-col lg:flex-row items-center">
             
             {/* Left Column: Text */}
-            <div className="w-full lg:w-1/2 mb-6 lg:mb-0 relative z-20">
+            <div className="w-full lg:w-3/5 mb-6 lg:mb-0 relative z-20 pt-2 lg:pt-0">
               
-              <div className="flex items-center mb-3 lg:mb-6">
-                <div className="w-0 h-0 border-l-[6px] lg:border-l-[8px] border-l-brand-gold border-y-[4px] lg:border-y-[6px] border-y-transparent mr-3 lg:mr-4"></div>
-                <h2 className="text-base lg:text-base font-bold tracking-[0.2em] text-gray-400 uppercase">
-                  Welcome to ISRESSM
+              <div className="flex items-center mb-6 lg:mb-8">
+                <h2 className="text-xs lg:text-sm font-bold tracking-[0.15em] text-gray-300">
+                  Welcome to the Institute of Strategic Research on Environment, Security and Safety Management
                 </h2>
               </div>
 
-              <h1 className="text-3xl sm:text-4xl md:text-6xl xl:text-7xl font-black leading-[1.1] text-white mb-3 lg:mb-8 tracking-tighter uppercase">
-                Building <br />
-                Knowledge. <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">Enhancing</span> <br />
-                Safety.
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black leading-tight text-white mb-6 lg:mb-8 tracking-tight max-w-4xl">
+                Building Knowledge, Enhancing Safety, Protecting the <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300">Environment.</span>
               </h1>
 
-              <p className="text-gray-400 text-base md:text-lg max-w-xl mb-4 lg:mb-10 leading-relaxed">
+              <p className="text-gray-200 text-base md:text-lg max-w-xl mb-4 lg:mb-10 leading-relaxed">
                 A premier institute dedicated to world-class research, high-impact training, 
                 policy development, and professional capacity building.
               </p>
@@ -82,27 +80,14 @@ const Home: React.FC = () => {
               </div>
             </div>
 
-            {/* Right Column: Image */}
-            <div className="w-full lg:w-1/2 relative flex justify-center lg:justify-end h-full mt-6 lg:mt-0">
-               <div className="relative z-10 lg:-mr-32 xl:-mr-48">
-                  {/* Main Image */}
-                  <img 
-                    src="https://i.ibb.co/R4jphyFg/ISRESSM-1.jpg" 
-                    alt="ISRESSM Hero" 
-                    className="relative z-10 w-full max-w-[300px] lg:max-w-[700px] h-auto object-cover mask-gradient"
-                    style={{
-                      maskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)',
-                      WebkitMaskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)'
-                    }}
-                  />
-                  
-                  {/* Decorative "ISRESSM" Text behind image */}
-                  <div className="absolute top-20 right-0 lg:-right-10 -z-10 select-none pointer-events-none opacity-20 lg:opacity-100">
-                    <span className="text-[8rem] lg:text-[12rem] font-black text-white/5 writing-mode-vertical rotate-90 hidden lg:block">
-                      ISRESSM
-                    </span>
-                  </div>
-               </div>
+            {/* Right Column: Empty (image now in background) */}
+            <div className="w-full lg:w-2/5 relative hidden lg:flex justify-center lg:justify-end h-full mt-6 lg:mt-0">
+              {/* Decorative "ISRESSM" Text */}
+              <div className="relative z-10 lg:-mr-32 xl:-mr-48 opacity-10">
+                <span className="text-[8rem] lg:text-[12rem] font-black text-white writing-mode-vertical rotate-90 hidden lg:block">
+                  ISRESSM
+                </span>
+              </div>
             </div>
 
           </div>

@@ -149,6 +149,25 @@ const Apply: React.FC = () => {
                 </div>
             </div>
 
+            {/* Bank Account Details */}
+            <div className="bg-secondary-50 border-l-4 border-primary-600 p-6 lg:p-8 rounded-lg">
+                <h3 className="text-lg font-bold text-secondary-900 mb-4">Institute Account Details for Payment</h3>
+                <div className="space-y-3 text-sm lg:text-base">
+                    <div className="flex flex-col sm:flex-row gap-2">
+                        <span className="font-semibold text-gray-700 min-w-[120px]">A/C Number:</span>
+                        <span className="text-gray-600 font-mono">2047768976</span>
+                    </div>
+                    <div className="flex flex-col sm:flex-row gap-2">
+                        <span className="font-semibold text-gray-700 min-w-[120px]">A/C Name:</span>
+                        <span className="text-gray-600">Inst of Strategic Research on Env Sec And Safety Mgt.</span>
+                    </div>
+                    <div className="flex flex-col sm:flex-row gap-2">
+                        <span className="font-semibold text-gray-700 min-w-[120px]">Bank Name:</span>
+                        <span className="text-gray-600">First Bank</span>
+                    </div>
+                </div>
+            </div>
+
             <div className="pt-4">
                 <button type="submit" className="w-full bg-primary-600 hover:bg-primary-700 text-white font-bold py-3 lg:py-4 rounded-lg shadow-md transition-all text-base lg:text-lg">
                     Submit Application
