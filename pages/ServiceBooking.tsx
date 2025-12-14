@@ -4,7 +4,7 @@ import SEO from '../components/SEO';
 import { SERVICES } from '../constants';
 import { CalendarCheck, ClipboardList, FileText, Mail, Phone, User } from 'lucide-react';
 
-const FORM_ENDPOINT = 'https://formspree.io/f/xwpgbbdk';
+const FORM_ENDPOINT = 'https://formspree.io/f/mzznggly';
 
 const ServiceBooking: React.FC = () => {
   const [serviceIndex, setServiceIndex] = useState(0);

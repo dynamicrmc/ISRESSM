@@ -36,7 +36,9 @@ const Apply: React.FC = () => {
                NOTE: To make this form functional, replace the action URL with your specific Formspree ID.
                e.g. action="https://formspree.io/f/xyzaqwer"
             */}
-          <form action="https://formspree.io/f/mzznggly" method="POST" encType="multipart/form-data" className="space-y-6 lg:space-y-8">
+                    <form action="https://formspree.io/f/mzznggly" method="POST" className="space-y-6 lg:space-y-8">
+                        {/* Redirect to thank-you page after successful Formspree submit */}
+                        <input type="hidden" name="_next" value={typeof window !== 'undefined' ? `${window.location.origin}${window.location.pathname}#/thank-you` : '/#/thank-you'} />
             
             {/* Personal Details */}
             <div className="space-y-4 lg:space-y-6">
@@ -134,18 +136,72 @@ const Apply: React.FC = () => {
                 </div>
             </div>
 
-            {/* Uploads */}
+            {/* Educational Background */}
             <div className="space-y-4 lg:space-y-6">
-                <h3 className="text-lg font-bold text-secondary-900 border-b pb-2">Documents</h3>
-                
-                <div>
-                    <label htmlFor="cv" className="block text-sm font-medium text-gray-700 mb-1">Upload CV (PDF/Doc) <span className="text-red-600 font-bold">*</span></label>
-                    <input type="file" name="cv" id="cv" accept=".pdf,.doc,.docx" required className="w-full text-xs lg:text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-xs lg:file:text-sm file:font-semibold file:bg-primary-50 file:text-primary-700 hover:file:bg-primary-100" />
+                <h3 className="text-lg font-bold text-secondary-900 border-b pb-2">Educational Background</h3>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
+                    <div>
+                        <label htmlFor="highest_qualification" className="block text-sm font-medium text-gray-700 mb-1">Highest Qualification</label>
+                        <input type="text" name="highest_qualification" id="highest_qualification" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 outline-none text-sm lg:text-base" />
+                    </div>
+                    <div>
+                        <label htmlFor="institution_attended" className="block text-sm font-medium text-gray-700 mb-1">Institution Attended</label>
+                        <input type="text" name="institution_attended" id="institution_attended" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 outline-none text-sm lg:text-base" />
+                    </div>
                 </div>
 
-                <div>
-                    <label htmlFor="photo" className="block text-sm font-medium text-gray-700 mb-1">Upload Passport Photograph <span className="text-red-600 font-bold">*</span></label>
-                    <input type="file" name="photo" id="photo" accept="image/*" required className="w-full text-xs lg:text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-xs lg:file:text-sm file:font-semibold file:bg-primary-50 file:text-primary-700 hover:file:bg-primary-100" />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
+                    <div>
+                        <label htmlFor="course_of_study" className="block text-sm font-medium text-gray-700 mb-1">Course of Study</label>
+                        <input type="text" name="course_of_study" id="course_of_study" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 outline-none text-sm lg:text-base" />
+                    </div>
+                    <div>
+                        <label htmlFor="year_of_graduation" className="block text-sm font-medium text-gray-700 mb-1">Year of Graduation</label>
+                        <input type="text" name="year_of_graduation" id="year_of_graduation" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 outline-none text-sm lg:text-base" />
+                    </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
+                    <div>
+                        <label htmlFor="professional_qualifications" className="block text-sm font-medium text-gray-700 mb-1">Professional Qualifications</label>
+                        <input type="text" name="professional_qualifications" id="professional_qualifications" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 outline-none text-sm lg:text-base" />
+                    </div>
+                    <div>
+                        <label htmlFor="professional_institution" className="block text-sm font-medium text-gray-700 mb-1">Institution</label>
+                        <input type="text" name="professional_institution" id="professional_institution" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 outline-none text-sm lg:text-base" />
+                    </div>
+                </div>
+            </div>
+
+            {/* Work Experience */}
+            <div className="space-y-4 lg:space-y-6">
+                <h3 className="text-lg font-bold text-secondary-900 border-b pb-2">Work Experience</h3>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
+                    <div>
+                        <label htmlFor="current_employer" className="block text-sm font-medium text-gray-700 mb-1">Current Employer</label>
+                        <input type="text" name="current_employer" id="current_employer" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 outline-none text-sm lg:text-base" />
+                    </div>
+                    <div>
+                        <label htmlFor="position_held" className="block text-sm font-medium text-gray-700 mb-1">Position Held</label>
+                        <input type="text" name="position_held" id="position_held" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 outline-none text-sm lg:text-base" />
+                    </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
+                    <div>
+                        <label htmlFor="years_of_experience" className="block text-sm font-medium text-gray-700 mb-1">Years of Experience</label>
+                        <input type="text" name="years_of_experience" id="years_of_experience" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 outline-none text-sm lg:text-base" />
+                    </div>
+                    <div>
+                        <label htmlFor="date_of_employment" className="block text-sm font-medium text-gray-700 mb-1">Date of Employment</label>
+                        <input type="date" name="date_of_employment" id="date_of_employment" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 outline-none text-sm lg:text-base" />
+                    </div>
+                </div>
+
+                <div className="text-center mt-3">
+                    <p className="text-sm font-semibold">Note: Send Proof of Payment to: <span className="text-primary-600">08034012264</span></p>
                 </div>
             </div>
 
