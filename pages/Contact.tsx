@@ -16,7 +16,7 @@ const Contact: React.FC = () => {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img 
-            src="https://images.unsplash.com/photo-1627556704290-2b1f5853ff78?q=80&w=1000&auto=format&fit=crop" 
+            src="https://i.ibb.co/R4jphyFg/ISRESSM-1.jpg" 
             alt="Background" 
             className="w-full h-full object-cover"
           />
@@ -99,7 +99,7 @@ const Contact: React.FC = () => {
 
           <div className="bg-white p-6 lg:p-8 rounded-2xl shadow-lg border border-gray-100">
             <h2 className="text-2xl font-bold text-secondary-900 mb-6">Send a Message</h2>
-            <form action="https://formspree.io/f/placeholder" method="POST" className="space-y-4 lg:space-y-6">
+            <form action="https://formspree.io/f/mzznggly" method="POST" className="space-y-4 lg:space-y-6">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
                 <input type="text" name="name" required className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 outline-none text-sm lg:text-base" />
